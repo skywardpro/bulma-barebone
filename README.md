@@ -9,22 +9,68 @@ Based on: bulma.io v0.9.4 | MIT License | https://github.com/jgthms/bulma
 - **Cleaned Bulma framework**: Retains only the most commonly used classes.
 - **Commonly used CSS properties**: Additional CSS classes included in **'sass/common-properties'** to easily adjust your design directly in the markup, with full responsiveness.
 
+## Project Structure
+
+```
+bulma-barebone/
+├── sass/
+│   ├── common-properties/  # Additional utility classes
+│   ├── utilities/         # Core utility functions
+│   ├── layout/           # Layout components
+│   ├── helpers/          # Helper classes
+│   ├── grid/             # Grid system
+│   └── elements/         # Basic elements
+├── bulma-barebone.sass   # Main SASS file
+└── _bulma-barebone.css   # Compiled CSS output
+```
+
 ## Getting Started
 
 ### Prerequisites
 
-Ensure you have a SASS compiler installed. You can use [Sass](https://sass-lang.com/install) or another compatible compiler.
+1. Install Node.js and npm from [nodejs.org](https://nodejs.org/)
+2. Install SASS globally:
+```bash
+npm install -g sass
+```
 
 ### Installation
 
-Clone this repository or download the SASS file directly into your project folder:
+1. Clone this repository:
+```bash
+git clone https://github.com/skywardpro/bulma-barebone.git
+cd bulma-barebone
+```
 
-```git clone https://github.com/skywardpro/bulma-barebone.git```
+2. Install dependencies (if any):
+```bash
+npm install
+```
 
+### Building the SASS
+
+1. To compile SASS to CSS:
+```bash
+sass bulma-barebone.sass _bulma-barebone.css
+```
+
+2. For development with watch mode (auto-compile on changes):
+```bash
+sass --watch bulma-barebone.sass _bulma-barebone.css
+```
+
+3. For production build (minified):
+```bash
+sass bulma-barebone.sass _bulma-barebone.css --style compressed
+```
 
 ## Customization
 
-Modify the **'.sass'** files to add or remove CSS classes as needed.
+1. Modify the SASS files in the `sass/` directory to customize styles
+2. Main entry point is `bulma-barebone.sass`
+3. Add your custom variables in `sass/utilities/_variables.sass`
+4. Add new components in their respective directories under `sass/`
+5. Rebuild using the commands above
 
 ## Contributing
 
